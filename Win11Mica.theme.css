@@ -1,0 +1,266 @@
+/**
+ * @name NeoFrutiger (mica)
+ * @author Reizu
+ * @version 11.5.0
+ * @description What if Frutiger and XP had continued into the future.
+ */
+
+/* Typography */
+body, button, input, [class*="markup-"] {
+    font-family: "Segoe UI Variable Text", "Segoe UI", sans-serif !important;
+}
+
+/* Variables */
+:root {
+    --background-primary: transparent !important;
+    --background-secondary: transparent !important;
+    --background-secondary-alt: transparent !important;
+    --background-tertiary: transparent !important;
+    --background-accent: transparent !important;
+    --background-floating: rgba(15, 20, 28, 0.45) !important;
+    --bg-overlay-chat: transparent !important;
+    --bg-overlay-app-frame: transparent !important;
+    --radius-full: 6px !important;
+    --radius-round: 6px !important;
+}
+
+/* Resets */
+html, body, #app-mount,
+[class*="bg_"],
+[class*="app_"],
+[class*="layers_"],
+[class*="layer_"],
+[class*="mainBuilder_"],
+[class*="pageWrapper_"],
+[class*="guilds_"],
+[class*="scroller_"],
+[class*="standardSidebarView_"],
+[class*="sidebarRegion_"],
+[class*="sidebarRegionScroller_"],
+[class*="contentRegion_"],
+[class*="contentRegionScroller_"],
+[class*="contentColumn_"],
+[class*="chat_"],
+[class*="chatContent_"],
+[class*="tabBody_"],
+[class*="peopleColumn_"],
+[class*="container_"] {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+/* Panels & Layout */
+#app-mount [class*="sidebar_"],
+#app-mount [class*="chat_"],
+#app-mount [class*="panels_"],
+#app-mount [class*="nowPlayingColumn_"],
+#app-mount [class*="membersWrap_"],
+#app-mount [class*="members_"] {
+    background: rgba(12, 18, 26, 0.30) !important;
+    backdrop-filter: blur(22px) saturate(145%) !important;
+    border-radius: 6px !important;
+    border: 1px solid rgba(0, 0, 0, 0.40) !important;
+    box-shadow: 
+        inset 1px 1px 0px rgba(255, 255, 255, 0.28),
+        inset -1px -1px 0px rgba(0, 0, 0, 0.40),
+        0 12px 40px rgba(0, 0, 0, 0.35) !important;
+}
+
+#app-mount [class*="base_"] {
+    gap: 8px !important;
+    padding: 8px !important;
+}
+
+/* Cards & Containers */
+[class*="itemCard_"],
+[class*="outer_"] {
+    background: rgba(0, 0, 0, 0.22) !important;
+    border-radius: 6px !important;
+    border: 1px solid rgba(0, 0, 0, 0.32) !important;
+    box-shadow: 
+        inset 1px 1px 0px rgba(255, 255, 255, 0.16),
+        inset -1px -1px 0px rgba(0, 0, 0, 0.25) !important;
+}
+
+/* Buttons */
+[class*="actionButton_"] {
+    background: rgba(0, 0, 0, 0.25) !important;
+    border-radius: 5px !important;
+    border: 1px solid rgba(0, 0, 0, 0.35) !important;
+    box-shadow: 
+        inset 1px 1px 0px rgba(255, 255, 255, 0.22),
+        inset -1px -1px 0px rgba(0, 0, 0, 0.40) !important;
+    transition: background 0.15s ease, box-shadow 0.15s ease !important;
+}
+
+[class*="actionButton_"]:hover {
+    background: rgba(255, 255, 255, 0.12) !important;
+    box-shadow: 
+        inset 1px 1px 0px rgba(255, 255, 255, 0.35),
+        inset -1px -1px 0px rgba(0, 0, 0, 0.20) !important;
+}
+
+/* Inputs & Search */
+[class*="channelTextArea"],
+[class*="searchBar"] {
+    background: rgba(0, 0, 0, 0.32) !important;
+    border-radius: 6px !important;
+    border: 1px solid rgba(0, 0, 0, 0.45) !important;
+    box-shadow: 
+        inset 1px 1px 0px rgba(0, 0, 0, 0.50),
+        inset -1px -1px 0px rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Lists & Members */
+[class*="peopleListItem"],
+[class*="channel-"] {
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+}
+
+[class*="peopleListItem"]:hover,
+[class*="interactive-"]:hover,
+[class*="member-"]:hover {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border-radius: 4px !important;
+    box-shadow: 
+        inset 1px 1px 0px rgba(255, 255, 255, 0.15),
+        inset -1px -1px 0px rgba(0, 0, 0, 0.1) !important;
+    transition: background 0.1s ease !important;
+}
+
+/* Modals & Popouts */
+[class*="menu-"],
+[class*="popout-"],
+[class*="modal_"],
+[class*="root_"] {
+    background: rgba(15, 22, 30, 0.45) !important;
+    backdrop-filter: blur(24px) saturate(140%) !important;
+    border-radius: 6px !important;
+    border: 1px solid rgba(0, 0, 0, 0.35) !important;
+    box-shadow: 
+        inset 1px 1px 0px rgba(255, 255, 255, 0.22),
+        inset -1px -1px 0px rgba(0, 0, 0, 0.35),
+        0 10px 30px rgba(0, 0, 0, 0.4) !important;
+    animation: fadeInMenu 0.15s ease-out forwards !important;
+}
+
+@keyframes fadeInMenu {
+    from {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Profiles */
+[class*="userPopout_"],
+[class*="profilePanel_"],
+[class*="userProfileOuter_"],
+[class*="userProfileInner_"],
+[class*="userProfileModal_"],
+[class*="autocomplete_"] {
+    background: rgba(12, 18, 26, 0.38) !important;
+    backdrop-filter: blur(24px) saturate(140%) !important;
+    border-radius: 6px !important;
+    border: 1px solid rgba(0, 0, 0, 0.35) !important;
+    box-shadow: 
+        inset 1px 1px 0px rgba(255, 255, 255, 0.22),
+        inset -1px -1px 0px rgba(0, 0, 0, 0.35),
+        0 10px 30px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Avatars */
+[class*="avatar_"],
+[class*="avatar-"],
+[class*="avatarStack_"],
+[class*="avatar"] foreignObject,
+[class*="avatar"] img,
+[class*="replyAvatar_"],
+[class*="guilds_"] [class*="wrapper_"],
+[class*="guilds_"] [class*="childWrapper_"],
+[class*="guilds_"] img,
+[class*="profileCustomizationSection"] [class*="wrapper_"],
+[class*="bannerSVGWrapper"] + [class*="contents"] [class*="avatar"] {
+    border-radius: 6px !important;
+    mask: none !important;
+    -webkit-mask: none !important;
+}
+
+[class*="avatar"] [class*="wrapper_"],
+[class*="avatarHint_"],
+[class*="statusProfile_"],
+[class*="avatarWrapper"] {
+    background-color: transparent !important;
+    border-radius: 6px !important;
+}
+
+foreignObject[mask*="url(#"],
+[class*="avatar"] svg {
+    mask: none !important;
+    -webkit-mask: none !important;
+    border-radius: 6px !important;
+}
+
+[class*="avatarDecoration"] {
+    overflow: visible !important;
+    pointer-events: none !important;
+    background: transparent !important;
+    border-radius: 6px !important;
+}
+
+[class*="avatarDecoration"] img,
+[class*="avatarDecoration"] svg {
+    overflow: visible !important;
+    max-width: none !important;
+}
+
+/* Navigation */
+[class*="tutorialContainer"] [class*="childWrapper_"] svg,
+[class*="homeIcon_"] {
+    display: none !important;
+}
+
+[class*="tutorialContainer"] [class*="childWrapper_"] {
+    background: rgba(0, 0, 0, 0.25) !important;
+    border-radius: 6px !important;
+    border: 1px solid rgba(0, 0, 0, 0.35) !important;
+    box-shadow: 
+        inset 1px 1px 0px rgba(255, 255, 255, 0.25),
+        inset -1px -1px 0px rgba(0, 0, 0, 0.40) !important;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="%23ffffff"><path d="M3 5.5L10.5 4.5V11.5H3V5.5ZM3 12.5H10.5V19.5L3 18.5V12.5ZM11.5 4.3L21 3V11.5H11.5V4.3ZM11.5 12.5H21V21L11.5 19.7V12.5Z"/></svg>') !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: 18px !important;
+    transition: background-color 0.15s ease, box-shadow 0.15s ease !important;
+}
+
+[class*="tutorialContainer"] [class*="childWrapper_"]:hover {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    box-shadow: 
+        inset 1px 1px 0px rgba(255, 255, 255, 0.4),
+        inset -1px -1px 0px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+    width: 6px !important;
+    height: 6px !important;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent !important;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15) !important;
+    border-radius: 3px !important;
+    border: 1px solid rgba(0, 0, 0, 0.2) !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3) !important;
+}
